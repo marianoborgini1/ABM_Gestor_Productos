@@ -5,9 +5,8 @@
 
 <section>
     <h2>📝 Descripción</h2>
-    <p>Este proyecto es un <strong>sistema ABM (Alta, Baja, Modificación) de productos</strong> desarrollado en Java.
-        Permite agregar, listar, buscar y borrar productos de una tienda de forma sencilla. Es ideal para practicar
-        programación orientada a objetos (POO) y como ejemplo para portfolios.</p>
+    <p>Proyecto <strong>sistema ABM (Alta, Baja, Modificación) de productos</strong> desarrollado en Java.
+        Permite agregar, listar, buscar y borrar productos de una tienda de forma sencilla.</p>
 </section>
 
 <section>
@@ -88,8 +87,8 @@ java -cp bin App
 </section>
 
 <section>
-    <h2>🎨 Preview</h2>
-    <img src="https://i.imgur.com/ejemplo.png" alt="Preview del proyecto" style="width:100%; max-width:600px;">
+    <h2> 🧩 Diagrama de clases</h2>
+    <img src="img/diagrama_de_clases.png" alt="Preview del proyecto" style="width:80%; max-width:500px;">
     <p>Reemplaza esta imagen por un screenshot de tu consola mostrando la app funcionando.</p>
 </section>
 
