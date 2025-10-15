@@ -1,18 +1,112 @@
-## Getting Started
+<header>
+    <h1>🛒 ABM Gestor de Productos en Java</h1>
+    <p>Proyecto de consola en Java para gestionar productos de una tienda</p>
+</header>
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+<section>
+    <h2>📝 Descripción</h2>
+    <p>Este proyecto es un <strong>sistema ABM (Alta, Baja, Modificación) de productos</strong> desarrollado en Java.
+        Permite agregar, listar, buscar y borrar productos de una tienda de forma sencilla. Es ideal para practicar
+        programación orientada a objetos (POO) y como ejemplo para portfolios.</p>
+</section>
 
-## Folder Structure
+<section>
+    <h2>📂 Estructura del proyecto</h2>
+    <pre>
+abm_gestion_productos/
+│
+├─ src/        → Código fuente (.java)
+├─ bin/        → Archivos compilados (.class)
+├─ README.md   → Este archivo
+└─ .git/       → Carpeta de Git
+    </pre>
+</section>
 
-The workspace contains two folders by default, where:
+<section>
+    <h2>🚀 Tecnologías utilizadas</h2>
+    <ul>
+        <li>Java 17</li>
+        <li>Git / GitHub</li>
+        <li>Programación Orientada a Objetos (POO)</li>
+    </ul>
+</section>
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+<section>
+    <h2>📥 Clonar el proyecto</h2>
+    <p>Para clonar este repositorio y probar el proyecto en tu Pc:</p>
+    <pre>
+# Clonar el repo desde GitHub
+git clone https://github.com/marianoborgini1/ABM_Gestor_Productos.git
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+# Entrar a la carpeta del proyecto
+cd ABM_Gestor_Produc/abm_gestion_productos
+    </pre>
+</section>
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+<section>
+    <h2>⚙️ Cómo ejecutar</h2>
+    <pre>
+# Abrir PowerShell o CMD en la carpeta raíz del proyecto
+cd "C:\Programacion\sistema_abm_productos\abm_gestion_productos"
 
-## Dependency Management
+# Compilar archivos Java
+javac src/*.java -d bin
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# Ejecutar el programa
+java -cp bin App
+    </pre>
+</section>
+
+<section>
+    <h2>📌 Funcionalidades principales</h2>
+    <table>
+        <tr>
+            <th>Función</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>Agregar</td>
+            <td>Permite ingresar un nuevo producto</td>
+        </tr>
+        <tr>
+            <td>Listar</td>
+            <td>Muestra todos los productos existentes</td>
+        </tr>
+        <tr>
+            <td>Buscar</td>
+            <td>Busca un producto por nombre</td>
+        </tr>
+        <tr>
+            <td>Borrar</td>
+            <td>Elimina un producto por nombre</td>
+        </tr>
+        <tr>
+            <td>Productos precargados</td>
+            <td>Para probar la app sin agregar nada</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>🎨 Preview</h2>
+    <img src="https://i.imgur.com/ejemplo.png" alt="Preview del proyecto" style="width:100%; max-width:600px;">
+    <p>Reemplaza esta imagen por un screenshot de tu consola mostrando la app funcionando.</p>
+</section>
+
+<section>
+    <h2>💻 Autor</h2>
+    <p><strong>Mariano Borgini</strong> – Estudiante de Desarrollo de Software</p>
+    <a href="https://github.com/marianoborgini1" class="button">Mi GitHub</a>
+</section>
+
+<section>
+    <h2>📜 Licencia</h2>
+    <p>Este proyecto está bajo la licencia MIT.</p>
+</section>
+
+<footer>
+    &copy; 2025 Mariano Borgini
+</footer>
+
+</body>
+</html>
