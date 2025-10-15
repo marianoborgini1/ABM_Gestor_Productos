@@ -5,9 +5,8 @@
 
 <section>
     <h2>📝 Descripción</h2>
-    <p>Este proyecto es un <strong>sistema ABM (Alta, Baja, Modificación) de productos</strong> desarrollado en Java.
-        Permite agregar, listar, buscar y borrar productos de una tienda de forma sencilla. Es ideal para practicar
-        programación orientada a objetos (POO) y como ejemplo para portfolios.</p>
+    <p>Proyecto <strong>sistema ABM (Alta, Baja, Modificación) de productos</strong> desarrollado en Java.
+        Permite agregar, listar, buscar y borrar productos de una tienda de forma sencilla.</p>
 </section>
 
 <section>
