@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.time.LocalDate;
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -16,7 +17,6 @@ public class App {
             System.out.println("4. Buscar producto");
             System.out.println("5. Salir");
 
-
             System.out.print("Elige una opción: ");
             option = sc.nextInt();
             sc.nextLine();
@@ -30,20 +30,66 @@ public class App {
                     System.out.println("Categoria: ALIMENTICIO - HOGAR - ELECTRONICO - NINGUNA ");
                     System.out.println("Ingrese la categoria: ");
                     String categoriaTemp = sc.nextLine();
-                    ProductoCategoria categoria = ProductoCategoria.valueOf(categoriaTemp.trim().toUpperCase());
+                    
 
-                    System.out.println("Ingrese precio: ");
-                    double precio = sc.nextDouble();
-                    sc.nextLine();
+                    try {
+                        ProductoCategoria categoria = ProductoCategoria.valueOf(categoriaTemp.trim().toUpperCase());
 
-                    System.out.println("Ingrese stock: ");
-                    int stock = sc.nextInt();
-                    sc.nextLine();
+                        if (categoriaTemp.equalsIgnoreCase("ALIMENTICIO")){
+                        System.out.println("Ingrese precio: ");
+                        double precio = sc.nextDouble();
+                        sc.nextLine();
 
-                    Producto producto = new Producto(nombreProducto, categoria, precio, stock);
-                    tienda.agregarProducto(producto);
+                        System.out.println("Ingrese stock: ");
+                        int stock = sc.nextInt();
+                        sc.nextLine();
 
-                    System.out.println("Producto agregado correctamente...");
+                        System.out.println("Ingrese la fecha de vencimiento: AAAA-MM-DD");
+                        // Convertimos de String a localDate
+                        String fechaVen = sc.nextLine();
+                        LocalDate vencimiento = LocalDate.parse(fechaVen);
+
+                        ProductoAlimenticio productoA = new ProductoAlimenticio(nombreProducto, precio, stock, categoria ,vencimiento, false);
+                        productoA.mostrarInfo();
+                        tienda.agregarProducto(productoA);
+
+                    } else if ( (categoriaTemp.equalsIgnoreCase("HOGAR")) || (categoriaTemp.equalsIgnoreCase("ELECTRONICO"))) {
+                        System.out.println("Ingrese precio: ");
+                        double precio = sc.nextDouble();
+                        sc.nextLine();
+
+                        System.out.println("Ingrese stock: ");
+                        int stock = sc.nextInt();
+                        sc.nextLine();
+
+                        System.out.println("Ingrese la fecha de garantia: AAAA-MM-DD");
+                        // Convertimos de String a localDate
+                        String fechaGarantia = sc.nextLine();
+                        LocalDate garantiaVenc = LocalDate.parse(fechaGarantia);
+                        
+                        ProductoConGarantia productoG = new ProductoConGarantia(nombreProducto, precio, stock, categoria, garantiaVenc, false);
+                        productoG.mostrarInfo();
+                        tienda.agregarProducto(productoG);
+
+                    } else if ((categoriaTemp.equalsIgnoreCase("NINGUNA"))) {
+                        
+                        System.out.println("Ingrese precio: ");
+                        double precio = sc.nextDouble();
+                        sc.nextLine();
+
+                        System.out.println("Ingrese stock: ");
+                        int stock = sc.nextInt();
+                        sc.nextLine();
+
+                        Producto productoSinCategoria = new Producto(nombreProducto, categoria, precio, stock);
+                        productoSinCategoria.mostrarInfo();
+                        tienda.agregarProducto(productoSinCategoria);
+
+                    } 
+
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Categoria no encontrada...");
+                    }
 
                     break;
                 
@@ -68,12 +114,14 @@ public class App {
 
                     if (encontrado != null){
                         System.out.println("--- Producto Encontrado ---");
-                        System.out.println("Producto: " + encontrado.getNombre());
-                        System.out.println("Categoria: " + encontrado.getCategoria());
-                        System.out.println("Precio: " + encontrado.getPrecio());
-                        System.out.println("Stock: " + encontrado.getStock());
+                        if (encontrado instanceof ProductoAlimenticio){
+                            ((ProductoAlimenticio) encontrado).mostrarInfo();
+                        } else if (encontrado instanceof ProductoConGarantia) {
+                            ((ProductoConGarantia) encontrado).mostrarInfo();
+                        } else {
+                            encontrado.mostrarInfo();
+                        }
                     }
-
 
                     break;
             
@@ -84,6 +132,7 @@ public class App {
 
         } while (option != 5);
 
+            System.out.println("Saliedo del sistema...");
             sc.close();
        
     }
