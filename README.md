@@ -88,7 +88,7 @@ java -cp bin App
 
 <section>
     <h2>🎨 Preview</h2>
-    <img src="https://i.imgur.com/ejemplo.png" alt="Preview del proyecto" style="width:100%; max-width:600px;">
+    <img src="img/diagrama_de_clases.png" alt="Preview del proyecto" style="width:100%; max-width:600px;">
     <p>Reemplaza esta imagen por un screenshot de tu consola mostrando la app funcionando.</p>
 </section>
 
